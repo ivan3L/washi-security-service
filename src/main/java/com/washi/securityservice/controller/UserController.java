@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.washi.securityservice.entity.User;
 import com.washi.securityservice.service.UserService;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @RestController
 @RequestMapping("/security/users")
+@Api(tags = "Security")
 public class UserController {
     @Autowired
     UserService userService;
